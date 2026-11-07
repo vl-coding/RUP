@@ -104,8 +104,8 @@ def print_desk(info):
             address_type = "Domestic"
 
     # Define credentials and URLs
-    login_url = "https://cdsw.uchicago.edu/cdcreporting/"
-    order_url = "https://cdsw.uchicago.edu/cdcreporting/cdcrptComps.aspx"
+    login_url = "https://distribution-center.example.com/cdcreporting/"
+    order_url = "https://distribution-center.example.com/cdcreporting/cdcrptComps.aspx"
     credentials = {
         "username": os.getenv("CDC_USERNAME"),
         "password": os.getenv("CDC_PASSWORD")

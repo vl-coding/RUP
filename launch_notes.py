@@ -11,8 +11,8 @@ import time
 # def launch_notes():
 # notes = input("What are the launch notes?\n")
 
-login_url = "https://tme.firebrandtech.com/RUP/TmmWeb/User/Login"
-launch_notes_url = "https://tme.firebrandtech.com/RUP/TmmWeb/Home"
+login_url = "https://title-management.example.com/RUP/TmmWeb/User/Login"
+launch_notes_url = "https://title-management.example.com/RUP/TmmWeb/Home"
 credentials = {
     "username": os.getenv("FIREBRAND_USERNAME"),
     "password": os.getenv("FIREBRAND_PASSWORD")
@@ -93,7 +93,7 @@ try:
     # Step 3: Interact with the page to update publishings' information
     try:
         # navigate to primary version of publishing
-        driver.get("https://tme.firebrandtech.com/RUP/TmmWeb/Search/1/6")
+        driver.get("https://title-management.example.com/RUP/TmmWeb/Search/1/6")
         driver.find_element(By.ID, "Search_CriteriaDetailItems_0__StringValue").send_keys(inform["title"])
         driver.find_element(By.ID, "Search_CriteriaDetailItems_1__StringValue").send_keys(inform["author"])
         # editor = driver.find_element(By.ID, "Search_OrgLevels_0__OrgEntryKey")

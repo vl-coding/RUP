@@ -9,9 +9,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def generate_link(isbn, title):     
     # Define credentials and URLs
-    login_url = "https://www.bibliovault.org/BV.login.epl?bv.mybooks.epl"
-    data_url = f"https://www.bibliovault.org/bv.mybooks.epl?pc=all&mybooks=certainbooks&findtype=ISBN&certainvalue={isbn}&aretoggle=1&availability=job_ccpy_20_32&metadataitem=10&metadatavalue=2024&fileformat=all&filestatus=&filetype="
-    data_url_2 = f"https://www.bibliovault.org/bv.mybooks.epl?pc=all&mybooks=certainbooks&findtype=title&certainvalue={title.replace(" ", "+") }&aretoggle=1&availability=job_ccpy_20_32&metadataitem=10&metadatavalue=2024&fileformat=all&filestatus=&filetype=" 
+    login_url = "https://ebook-vault.example.com/BV.login.epl?bv.mybooks.epl"
+    data_url = f"https://ebook-vault.example.com/bv.mybooks.epl?pc=all&mybooks=certainbooks&findtype=ISBN&certainvalue={isbn}&aretoggle=1&availability=job_ccpy_20_32&metadataitem=10&metadatavalue=2024&fileformat=all&filestatus=&filetype="
+    data_url_2 = f"https://ebook-vault.example.com/bv.mybooks.epl?pc=all&mybooks=certainbooks&findtype=title&certainvalue={title.replace(" ", "+") }&aretoggle=1&availability=job_ccpy_20_32&metadataitem=10&metadatavalue=2024&fileformat=all&filestatus=&filetype=" 
     credentials = {
         "username": os.getenv("BIBLIOVAULT_USERNAME"),
         "password": os.getenv("BIBLIOVAULT_PASSWORD")
@@ -85,7 +85,7 @@ def generate_link(isbn, title):
                     time.sleep(1)
                     
                     # # Copy the link to clipboard
-                    generated_link = driver.find_element(By.PARTIAL_LINK_TEXT, "https://www.bibliovault.org/cgi-bin/DeliverADE.epl?transid=")
+                    generated_link = driver.find_element(By.PARTIAL_LINK_TEXT, "https://ebook-vault.example.com/cgi-bin/DeliverADE.epl?transid=")
                     return generated_link.text
             except Exception:
                 print("link not available")

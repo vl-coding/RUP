@@ -26,15 +26,15 @@ def find_quart(month):
     return int(quart)
 
 def discount_code(publisher):
-    discount_code = "REXAM"
+    discount_code = "CODE"  # real prefix removed for public showcase
     if(publisher == "Rutgers University Press"):
-        discount_code = f"{discount_code}RUP"
+        discount_code = f"{discount_code}AAA"
     elif(publisher == "Bucknell University Press"):
-        discount_code = f"{discount_code}BUP"
+        discount_code = f"{discount_code}BBB"
     elif(publisher == "Universtiy of Delaware Press"):
-        discount_code = f"{discount_code}UD"
+        discount_code = f"{discount_code}CCC"
     elif(publisher == "Templeton University Press"):
-        discount_code = f"{discount_code}TEM"
+        discount_code = f"{discount_code}DDD"
     discount_code = f"{discount_code}{find_quart(datetime.now().month) + 1}Q{datetime.now().year % 100}"
     return discount_code
 
