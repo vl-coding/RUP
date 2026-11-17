@@ -7,6 +7,17 @@ me to automate it. I saw how repetitive and error-prone the process was and taug
 Selenium, spreadsheet automation and LLM APIs to **semi-automate my own workflow**, so I could
 spend less time keying in orders and more time on work that needed judgment.
 
+## Impact
+
+| Version | What it automated | Manual processing time |
+|---------|-------------------|------------------------|
+| v1: Selenium automation | Request classification, e-copy links, print order entry, emails, status tracking | **−50%** |
+| v2: + ChatGPT API for international orders | Classifying foreign and Canadian shipping addresses (previously a slow manual step) | **−80%** overall |
+
+International orders were the slowest to process by hand, because their address formats don't fit
+simple rules. Sending that one fuzzy step to an LLM (`AIAddressFinder.py`) is what took the time
+savings from half to four-fifths.
+
 > **Why this repo exists:** it's a portfolio piece meant to show my *initiative* and my *reasoning*
 > for building practical automation around a real-world, messy, multi-system workflow. It is one
 > of my **earliest automation attempts**, so it's deliberately preserved as-is (rough edges and
