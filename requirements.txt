@@ -1,0 +1,11 @@
+# Showcase repo — listed to document the stack, not pinned for reproducibility.
+openpyxl
+pandas
+requests
+rich
+selenium
+webdriver-manager
+streamlit
+openai
+deepseek
+tiktoken

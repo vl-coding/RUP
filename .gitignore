@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Secrets / local configuration (never commit real credentials)
+.env
+*.local.env
+
+# Browser-automation binaries (downloaded locally, not part of the source)
+chrome-win64/
+chrome-linux64/
+chromedriver-win64/
+chromedriver*.exe
+chrome*.exe
+
+# OS / editor noise
+.DS_Store
+.vscode/
+*.log
