@@ -1,13 +1,16 @@
 # RUP — Desk & Exam Copy Automation
 
-A set of Python scripts I wrote during my internship at **Rutgers University Press (RUP)**
-to semi-automate the fulfillment of professor **desk-copy** and **exam-copy** requests — a
-process that was previously done entirely by hand across several disconnected web systems.
+A **self-initiated passion project** I built while working at **Rutgers University Press (RUP)**.
+Part of my job was fulfilling professor **desk-copy** and **exam-copy** requests and pushing the
+resulting customer orders through several disconnected web systems, all by hand. Nobody asked
+me to automate it. I saw how repetitive and error-prone the process was and taught myself enough
+Selenium, spreadsheet automation and LLM APIs to **semi-automate my own workflow**, so I could
+spend less time keying in orders and more time on work that needed judgment.
 
-> **Why this repo exists:** it's a portfolio piece meant to show my *reasoning and logic* for
-> building practical automation around real-world, messy, multi-system workflows. It is one of
-> my **earliest automation attempts**, so it's deliberately preserved as-is (rough edges and all)
-> rather than polished after the fact.
+> **Why this repo exists:** it's a portfolio piece meant to show my *initiative* and my *reasoning*
+> for building practical automation around a real-world, messy, multi-system workflow. It is one
+> of my **earliest automation attempts**, so it's deliberately preserved as-is (rough edges and
+> all) rather than polished after the fact.
 >
 > It is **not** meant to be run by others. All credentials, personal emails, customer PII, and
 > internal/unpublished data have been removed or replaced with placeholders — secrets are read
@@ -28,8 +31,10 @@ A professor requests a desk or exam copy of a book. Fulfilling one request manua
 6. Drafting and sending the right email to the professor.
 7. Marking the request as done in the tracking spreadsheet.
 
-This repo automates most of that chain, leaving a human in the loop for review — hence
-*semi*-automation.
+Doing this by hand meant logging into each system, copying the same customer details between
+them, and choosing the right email template, for every single request. This repo automates most
+of that chain and leaves a human in the loop to review each step (hence *semi*-automation), so
+the repetitive data entry is handled by code and I only check and confirm.
 
 ## How it fits together
 
